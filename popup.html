@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="CalendarModule">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script src="vendor/jquery-3.4.1.js"></script>
+  <script src="vendor/angular.min.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/popup.js"></script>
+</head>
+
+<body ng-controller="CalendarController">
+  <div class="action-tool">
+    <button ng-click="onPrev()">&lt;&lt;</button>
+    <button id="current-btn" ng-click="getCurrentDate()">{{('0' + (month + 1)).slice(-2)}}/{{year}}</button>
+    <button ng-click="onNext()">&gt;&gt;</button>
+  </div>
+  <div id="calendar-table">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>CN</th>
+          <th>T2</th>
+          <th>T3</th>
+          <th>T4</th>
+          <th>T5</th>
+          <th>T6</th>
+          <th>T7</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="row in dates">
+          <td ng-repeat="cell in row" class="cell {{cell.isHide ? 'hide' : 'none'}}
+           {{cell.isSunday ? 'sunday' : null}} {{cell.isToday ? 'today': null}} ">
+            <div class="solar">{{('0' + cell.date.getDate()).slice(-2)}}</div>
+            <div class="lunar">{{('0' + cell.lunarDate[2]).slice(-2)}}{{cell.lunarDate[2] === 1 ? '/'+('0' + cell.lunarDate[1]).slice(-2): null}}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
