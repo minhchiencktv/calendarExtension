@@ -31,9 +31,15 @@
       <tbody>
         <tr ng-repeat="row in dates">
           <td ng-repeat="cell in row" class="cell {{cell.isHide ? 'hide' : 'none'}}
-           {{cell.isSunday ? 'sunday' : null}} {{cell.isToday ? 'today': null}} ">
-            <div class="solar">{{('0' + cell.date.getDate()).slice(-2)}}</div>
-            <div class="lunar">{{('0' + cell.lunarDate[2]).slice(-2)}}{{cell.lunarDate[2] === 1 ? '/'+('0' + cell.lunarDate[1]).slice(-2): null}}</div>
+           {{cell.isSunday ? 'sunday' : null}} {{cell.isToday ? 'today': null}}"
+            title="{{cell.event? cell.event.events[0].name : null}}">
+            <div class="cell-wrapper">
+              <div class="star">{{cell.event ? (cell.event.markedStar ? '*' : null) : null}}</div>
+              <div class="solar">{{('0' + cell.date.getDate()).slice(-2)}}</div>
+              <div class="lunar">
+                {{('0' + cell.lunarDate[2]).slice(-2)}}{{cell.lunarDate[2] === 1 ? '/'+('0' + cell.lunarDate[1]).slice(-2): null}}
+              </div>
+            </div>
           </td>
         </tr>
       </tbody>

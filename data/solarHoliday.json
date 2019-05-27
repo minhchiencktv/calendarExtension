@@ -1,0 +1,324 @@
+[
+  {
+    "date": 1,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Dương Lịch",
+        "description": "Ngày lễ Tết Quốc tế của hầu hết các quốc gia."
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 30,
+    "month": 4,
+    "events": [
+      {
+        "name": "Ngày Giải phóng miền Nam, Thống nhất đất nước",
+        "description": "Lễ Kỷ niệm ngày giải phóng miền Nam, thống nhất đất nước"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 1,
+    "month": 5,
+    "events": [
+      {
+        "name": "Ngày Quốc tế Lao động",
+        "description": "Kỷ niệm ngày của người lao động toàn thế giới."
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 2,
+    "month": 9,
+    "events": [
+      { "name": "Ngày Quốc khánh",
+        "description": "Kỷ niệm ngày Chủ tịch Hồ Chí Minh đọc tuyên ngôn độc lập."
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 9,
+    "month": 1,
+    "events": [
+      {
+        "name": "Ngày Học sinh - Sinh viên Việt Nam",
+        "description": "Ngày Học sinh - Sinh viên Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 3,
+    "month": 2,
+    "events": [
+      {
+        "name":"Ngày thành lập Đảng Cộng sản Việt Nam",
+        "description": "Ngày thành lập Đảng Cộng sản Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 27,
+    "month": 2,
+    "events": [
+      {
+        "name":"Ngày Thầy thuốc Việt Nam",
+        "description": "Ngày Thầy thuốc Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 8,
+    "month": 3,
+    "events": [
+      {
+        "name":"Ngày Quốc tế Phụ nữ",
+        "description": "Ngày Quốc tế Phụ nữ"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 20,
+    "month": 3,
+    "events": [
+      {
+        "name":"Ngày Quốc tế Hạnh phúc",
+        "description": "Ngày Quốc tế Hạnh phúc"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 22,
+    "month": 3,
+    "events": [
+      {
+        "name":"Ngày Nước sạch Thế giới",
+        "description": "Ngày Nước sạch Thế giới"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 26,
+    "month": 3,
+    "events": [
+      {
+        "name":"Ngày thành lập Đoàn Thanh niên Cộng sản Hồ Chí Minh",
+        "description": "Ngày thành lập Đoàn Thanh niên Cộng sản Hồ Chí Minh"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 27,
+    "month": 3,
+    "events": [
+      {
+        "name":"Ngày Thể thao Việt Nam",
+        "description": "Ngày Thể thao Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 21,
+    "month": 4,
+    "events": [
+      {
+        "name":"Ngày Sách Việt Nam",
+        "description": "Ngày Sách Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 22,
+    "month": 4,
+    "events": [
+      {
+        "name":"Ngày Trái đất",
+        "description": "Ngày Trái đất"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 7,
+    "month": 5,
+    "events": [
+      {
+        "name":"Ngày chiến thắng Điện Biên Phủ",
+        "description": "Ngày chiến thắng Điện Biên Phủ"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 15,
+    "month": 5,
+    "events": [
+      {
+        "name":"Ngày thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh",
+        "description": "Ngày thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 19,
+    "month": 5,
+    "events": [
+      {
+        "name":"Ngày sinh của Chủ tịch Hồ Chí Minh",
+        "description": "Ngày sinh của Chủ tịch Hồ Chí Minh"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 1,
+    "month": 6,
+    "events": [
+      {
+        "name":"Ngày Quốc tế Thiếu nhi",
+        "description": "Ngày Quốc tế Thiếu nhi"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 5,
+    "month": 6,
+    "events": [
+      {
+        "name":"Ngày Bác Hồ ra đi tìm đường cứu nước",
+        "description": "Ngày Bác Hồ ra đi tìm đường cứu nước"
+      },
+      {
+        "name": "Ngày môi trường thế giới",
+        "description": "Ngày môi trường thế giới"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 28,
+    "month": 6,
+    "events": [
+      {
+        "name":"Ngày Gia đình Việt Nam",
+        "description": "Ngày Gia đình Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 27,
+    "month": 7,
+    "events": [
+      {
+        "name":"Ngày Thương binh Liệt sĩ",
+        "description": "Ngày Thương binh Liệt sĩ"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 19,
+    "month": 8,
+    "events": [
+      {
+        "name":"Ngày Cách mạng Tám thành công",
+        "description": "Ngày Cách mạng Tám thành công"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 2,
+    "month": 9,
+    "events": [
+      {
+        "name":"Ngày Quốc khánh nước Cộng hoà Xã hội Chủ nghĩa Việt Nam",
+        "description": "Ngày Quốc khánh nước Cộng hoà Xã hội Chủ nghĩa Việt Nam"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 7,
+    "month": 9,
+    "events": [
+      {
+        "name":"Ngày thành lập Đài Truyền hình Việt Nam",
+        "description": "Ngày thành lập Đài Truyền hình Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 13,
+    "month": 10,
+    "events": [
+      {
+        "name":"Ngày Doanh nhân Việt Nam",
+        "description": "Ngày Doanh nhân Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 20,
+    "month": 10,
+    "events": [
+      {
+        "name":"Ngày thành lập Hội Phụ nữ Việt Nam",
+        "description": "Ngày thành lập Hội Phụ nữ Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 20,
+    "month": 11,
+    "events": [
+      {
+        "name":"Ngày Nhà giáo Việt Nam",
+        "description": "Ngày Nhà giáo Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 22,
+    "month": 12,
+    "events": [
+      {
+        "name":"Ngày thành lập Quân đội Nhân dân Việt Nam",
+        "description": "Ngày thành lập Quân đội Nhân dân Việt Nam"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 25,
+    "month": 12,
+    "events": [
+      {
+        "name":"Ngày Lễ Giáng Sinh",
+        "description": "Ngày Lễ Giáng Sinh"
+      }
+    ],
+    "markedStar": true
+  }
+]

@@ -26,6 +26,14 @@ table > tbody > tr > td {
   min-width: 34px;
   font-weight: bold;
 }
+.cell .cell-wrapper {
+  position: relative;
+}
+.cell .cell-wrapper .star {
+  position: absolute;
+  top: -5px;
+  right: 2px;
+}
 .solar {
   font-size: 14px;
 }

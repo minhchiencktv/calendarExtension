@@ -1,14 +1,11 @@
 'use strict';
 var app = angular.module('CalendarModule', []);
 
-app.controller('CalendarController', ['$scope', 'CalendarService', 'LunarUtilService',
-  function ($scope, CalendarService, LunarUtilService) {
+app.controller('CalendarController', ['$scope', '$http', 'CalendarService', 'LunarUtilService',
+  function ($scope, $http, CalendarService) {
   $scope.currentDate = new Date();
   $scope.year = new Date().getFullYear();
   $scope.month = new Date().getMonth();
-
-  console.log(CalendarService.formatNumber(9));
-
   /**
    * onPrev
    */
@@ -17,7 +14,10 @@ app.controller('CalendarController', ['$scope', 'CalendarService', 'LunarUtilSer
     var year = $scope.year;
     $scope.month = (month + 12) % 12;
     $scope.year = $scope.month === 11 ? (year - 1) : year;
-    $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month);
+    $http.get('./data/solarHoliday.json').then(function(response){
+      $scope.solarHoliday = response.data;
+      $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month, $scope.solarHoliday);
+    });
   }
   /**
    * onNext
@@ -27,7 +27,10 @@ app.controller('CalendarController', ['$scope', 'CalendarService', 'LunarUtilSer
     var year = $scope.year;
     $scope.month = month % 12;
     $scope.year = $scope.month === 0 ? (year + 1) : year;
-    $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month);
+    $http.get('./data/solarHoliday.json').then(function(response){
+      $scope.solarHoliday = response.data;
+      $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month, $scope.solarHoliday);
+    });
   }
   /**
    * getCurrentDate
@@ -36,28 +39,30 @@ app.controller('CalendarController', ['$scope', 'CalendarService', 'LunarUtilSer
     var now = new Date();
     $scope.month = now.getMonth();
     $scope.year = now.getFullYear();
-    $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month);
+    $http.get('./data/solarHoliday.json').then(function(response){
+      $scope.solarHoliday = response.data;
+      $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month, $scope.solarHoliday);
+    });
   }
   /**
    * Init app
    */
   $scope.InitApp = function () {
-    $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month);
-    console.log($scope.dates);
+    $http.get('./data/solarHoliday.json').then(function(response){
+      $scope.solarHoliday = response.data;
+      $scope.dates = CalendarService.getDateByMonthAndYear($scope.year, $scope.month, $scope.solarHoliday);
+    });
   }
   $scope.InitApp();
 }]);
 
 app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, LunarUtilService) {
-  var formatNumber = (number) => {
-    return ('0' + number).slice(-2);
-  }
   /**
   * getPreviousDatesOfMonth
   * @param {*} year 
   * @param {*} month 
   */
-  var getPreviousDatesOfMonth = function (year, month) {
+  var getPreviousDatesOfMonth = function (year, month, solarHoliday) {
     let date = new Date(year, month, 1);
     const dates = [];
     let day = date.getDay();
@@ -66,7 +71,10 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
       dates[i] = {
         date,
         isHide: true,
-        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7)
+        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7),
+        event: solarHoliday.find(function(item){
+          return item.date === date.getDate() && item.month === date.getMonth() + 1;
+        }),
       }
     }
     return dates;
@@ -76,7 +84,7 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
    * @param {*} year 
    * @param {*} month 
    */
-  var getNextDatesOfMonth = function (year, month) {
+  var getNextDatesOfMonth = function (year, month, solarHoliday) {
     let date = new Date(year, (month + 1), 1);
     const dates = [];
     const numWeek = date.getDay();
@@ -84,7 +92,10 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
       dates[i] = {
         date,
         isHide: true,
-        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7)
+        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7),
+        event: solarHoliday.find(function(item){
+          return item.date === date.getDate() && item.month === date.getMonth() + 1;
+        }),
       }
       date = new Date(Date.parse(date) + 86400000);
     }
@@ -95,7 +106,7 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
    * @param {*} year 
    * @param {*} month 
    */
-  var getDatesOfMonth = function (year, month) {
+  var getDatesOfMonth = function (year, month, solarHoliday) {
     var today = new Date();
     let dates = [];
     for (let i = 1; new Date(year, month, i).getMonth() === month; i++) {
@@ -107,7 +118,10 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
           && date.getMonth() === today.getMonth()
           && date.getDate() === today.getDate(),
         isSunday: date.getDay() === 0,
-        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7)
+        lunarDate: LunarUtilService.convertSolar2Lunar(date.getFullYear(), date.getMonth() + 1, date.getDate(), 7),
+        event: solarHoliday.find(function(item){
+          return item.date === date.getDate() && item.month === date.getMonth() + 1;
+        }),
       });
     }
     return dates;
@@ -117,12 +131,13 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
    * @param {*} year 
    * @param {*} month 
    */
-  var getDateByMonthAndYear = function (year, month) {
+  var getDateByMonthAndYear = function (year, month, solarHoliday) {
+    console.log(solarHoliday);
     let dates = [];
-    let prev = getPreviousDatesOfMonth(year, month);
-    let next = getNextDatesOfMonth(year, month);
+    let prev = getPreviousDatesOfMonth(year, month, solarHoliday);
+    let next = getNextDatesOfMonth(year, month, solarHoliday);
     dates = prev;
-    dates = dates.concat(getDatesOfMonth(year, month).concat());
+    dates = dates.concat(getDatesOfMonth(year, month, solarHoliday).concat());
     dates = dates.concat(next);
     const gridMonth = [];
     for (let i = 0; i < 6; i++) {
@@ -132,7 +147,6 @@ app.service('CalendarService', ['$log', 'LunarUtilService', function ($log, Luna
     return gridMonth;
   }
   return {
-    formatNumber,
     getNextDatesOfMonth,
     getDatesOfMonth,
     getDateByMonthAndYear,

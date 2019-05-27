@@ -1,0 +1,193 @@
+[
+  {
+    "date": 1,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Một Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 2,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Hai Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 3,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Ba Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 4,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Bốn Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 5,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Năm Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 6,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Đán",
+        "description": "Mồng Sáu Tết Nguyên Đán"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 10,
+    "month": 3,
+    "events": [
+      {
+        "name": "Ngày Giổ tổ Hùng Vương",
+        "description": "Kỷ niệm Ngày Giổ tổ Hùng Vương"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 23,
+    "month": 12,
+    "events": [
+      {
+        "name": "Ngày cúng ông Táo",
+        "description": "Ngày Tiễn Táo Quân về trời"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 15,
+    "month": 1,
+    "events": [
+      {
+        "name": "Tết Nguyên Tiêu",
+        "description": "Tết Nguyên Tiêu (Lễ Thượng Nguyên)."
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 3,
+    "month": 3,
+    "events": [
+      {
+        "name": "Tết Hàn Thực",
+        "description": "Tết Hàn Thực"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 15,
+    "month": 4,
+    "events": [
+      {
+        "name": "Lễ Phật Đản",
+        "description": "Lễ Phật Đản"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 5,
+    "month": 5,
+    "events": [
+      {
+        "name": "Tết Đoan Ngọ",
+        "description": "Tết Đoan Ngọ"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 15,
+    "month": 7,
+    "events": [
+      {
+        "name": "Lễ Vu Lan",
+        "description": "Lễ Vu Lan"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 15,
+    "month": 8,
+    "events": [
+      {
+        "name": "Tết Trung Thu",
+        "description": "Tết Trung Thu"
+      }
+    ],
+    "markedStar": true
+  },
+  {
+    "date": 10,
+    "month": 10,
+    "events": [
+      {
+        "name": "Tết Thường Tân",
+        "description": "Tết Thường Tân"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 15,
+    "month": 10,
+    "events": [
+      {
+        "name": "Tết Hạ Nguyên",
+        "description": "Tết Hạ Nguyên"
+      }
+    ],
+    "markedStar": false
+  },
+  {
+    "date": 5,
+    "month": 6,
+    "events": [
+      {
+        "name": "Ngày Bác Hồ ra đi tìm đường cứu nước",
+        "description": "Ngày Bác Hồ ra đi tìm đường cứu nước"
+      },
+      {
+        "name": "Ngày môi trường thế giới",
+        "description": "Ngày môi trường thế giới"
+      }
+    ],
+    "markedStar": false
+  }
+]
